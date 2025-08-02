@@ -199,53 +199,6 @@ tailwind.config = {
             window.location.href = 'RichaBiswas-July2025.pdf';
         });
         
-        // Profile Image Functionality
-        const changeImageBtn = document.getElementById('change-image-btn');
-        const imageUploadModal = document.getElementById('image-upload-modal');
-        const cancelImageBtn = document.getElementById('cancel-image-btn');
-        const saveImageBtn = document.getElementById('save-image-btn');
-        const imageUrlInput = document.getElementById('image-url-input');
-        const initialsInput = document.getElementById('initials-input');
-        const bgColorInput = document.getElementById('bg-color-input');
-        const profileImageContainer = document.getElementById('profile-image-container');
         
-        // Open image upload modal
-        changeImageBtn.addEventListener('click', () => {
-            imageUploadModal.classList.remove('hidden');
-        });
-        
-        // Close image upload modal
-        cancelImageBtn.addEventListener('click', () => {
-            imageUploadModal.classList.add('hidden');
-        });
-        
-        // Save image
-        saveImageBtn.addEventListener('click', () => {
-            const imageUrl = imageUrlInput.value.trim();
-            const initials = initialsInput.value.trim().toUpperCase();
-            const bgColor = bgColorInput.value;
-            
-            if (imageUrl) {
-                // Use the provided image URL
-                profileImageContainer.innerHTML = `
-                    <img src="${imageUrl}" alt="Profile" class="profile-image w-full h-full object-cover">
-                `;
-            } else if (initials) {
-                // Create an SVG with initials
-                profileImageContainer.innerHTML = `
-                    <svg class="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="100" cy="100" r="100" fill="${bgColor}" />
-                        <text x="100" y="125" text-anchor="middle" fill="#ffffff" font-size="60" font-weight="bold">${initials}</text>
-                    </svg>
-                `;
-            } else {
-                // If no input, create a default avatar
-                profileImageContainer.innerHTML = `
-                    <div class="profile-placeholder">
-                        <i class="fas fa-user text-4xl"></i>
-                    </div>
-                `;
-            }
-        });
         
         (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9672fbc2f139a09b',t:'MTc1Mzg1ODg3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
