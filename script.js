@@ -114,7 +114,7 @@ tailwind.config = {
             
             // In a real application, you would send this data to a server
             // For demo purposes, we'll just show an alert
-            alert(`Thank you, ${name}! email will not be sent .\n\nSubject: ${subject}\nMessage: ${message}`);
+            alert(`Thank you, ${name}! email will not be sent because of internal issue.\n\nSubject: ${subject}\nMessage: ${message}`);
             
             // Reset form
             contactForm.reset();
