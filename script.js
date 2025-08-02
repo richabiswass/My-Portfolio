@@ -185,6 +185,7 @@ tailwind.config = {
             }
         }
         
+        
         createBackgroundElements();
         
         // Download Resume Button
